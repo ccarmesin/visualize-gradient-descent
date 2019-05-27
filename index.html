@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Visualize gradient descent</title>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous>
+
+</head>
+
+<body>
+
+    <div class=container>
+
+        <section>
+            <h1>Visualize gradient descent</h1>
+        </section>
+
+        <section>
+            <h4>Description</h4>
+            <p>
+                In this example you can live visualize how the gradient changes if we adjust the parameters. For visualizing the function I use Googles line chart on the left. To visualize the gradient at the right I use 3dGraph from vis.js. For more information lokk at the README file. Under Adjustments you can tweak the value for a[0 - 5] and the exponent[0 - 3] and see how the function and the gradient behaves.
+            </p>
+            <p>The function you can adjust is: f(x) = a * x^exponent</p>
+        </section>
+
+        <section>
+            <h4>Adjustments</h4>
+
+            <div class=row>
+                <div class=col-sm-3>
+                    <p id=aLabel>a(1)</p>
+                    <input type=range class=custom-range value=1 min=0 max=5 step=0.1 id=aRange>
+                </div>
+                <div class=col-sm-3>
+                    <p id=expLabel>exp(2)</p>
+                    <input type=range class=custom-range value=2 min=0 max=3 step=0.1 id=expRange>
+                </div>
+                
+                <div class=col-sm-6>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h4>Visualisation</h4>
+            
+            <h2 class=text-center id=functionLbl>f(x) = x^2</h2>
+
+            <div class=row>
+                <div class=col-sm-6 id=chart_div>
+
+                </div>
+                <div class=col-sm-6 id=gradient_div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src=index.js></script>
+
+</body>
+
+</html>
